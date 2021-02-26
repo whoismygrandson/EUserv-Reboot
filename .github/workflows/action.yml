@@ -1,6 +1,6 @@
 name: 'EUserv Auto Extend'
- 
-#on:
+
+on:
   workflow_dispatch:
   push:
     branches:
@@ -24,7 +24,6 @@ jobs:
         run: |
           python -m pip install --upgrade requests
           python -m pip install --upgrade beautifulsoup4
-
       - name: 'Auto_renew'
         env:
           USERNAME: ${{ secrets.USERNAME }}
